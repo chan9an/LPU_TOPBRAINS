@@ -1,0 +1,12 @@
+CREATE DATABASE StudentDB;
+GO
+
+USE StudentDB;
+GO
+
+CREATE TABLE Students (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    Cgpa DECIMAL(3,2) CHECK (Cgpa BETWEEN 0.0 AND 4.0)
+);
