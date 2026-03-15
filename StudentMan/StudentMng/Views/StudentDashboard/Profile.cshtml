@@ -1,0 +1,18 @@
+﻿@model StudentMngSystem14_03_26.Models.Student
+
+<h2>Student Profile</h2>
+
+<hr />
+
+<p><strong>Name:</strong> @Model.StudentName</p>
+<p><strong>Email:</strong> @Model.Email</p>
+<p><strong>Phone:</strong> @Model.PhoneNumber</p>
+<p><strong>Address:</strong> @Model.Address</p>
+<p><strong>Department:</strong> @Model.Department.DepartmentName</p>
+<p><strong>Course:</strong> @Model.Course.CourseName</p>
+
+<br />
+
+<a asp-action="EditProfile" asp-route-id="@Model.StudentId" class="btn btn-warning">
+    Edit Profile
+</a>

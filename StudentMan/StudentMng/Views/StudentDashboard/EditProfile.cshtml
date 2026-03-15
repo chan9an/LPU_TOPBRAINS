@@ -1,0 +1,37 @@
+﻿@model StudentMngSystem14_03_26.Models.Student
+
+<h2>Edit Profile</h2>
+
+<form asp-action="EditProfile">
+
+    <input type="hidden" asp-for="StudentId" />
+    <input type="hidden" asp-for="DepartmentId" />
+    <input type="hidden" asp-for="CourseId" />
+
+    <div>
+        <label>Name</label>
+        <input asp-for="StudentName" class="form-control" readonly />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" readonly />
+    </div>
+
+    <div>
+        <label>Phone</label>
+        <input asp-for="PhoneNumber" class="form-control" />
+    </div>
+
+    <div>
+        <label>Address</label>
+        <input asp-for="Address" class="form-control" />
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-success">
+        Update
+    </button>
+
+</form>
